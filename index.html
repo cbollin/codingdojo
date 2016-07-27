@@ -2,15 +2,49 @@
 <html>
 <head>
 	<title>Dojo Thing</title>
-	<link rel="stylesheet" type="text/css" href="css/jquery.css">
 	<link rel="stylesheet" type="text/css" href="dojo.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
  	<script type="text/javascript">
 
     $(document).ready(function(){
-    	$()
-
+    	$('#beach').hover(function(){
+    		$('#container').css('background-image', 'url("beach.jpg")');
+    	}, function(){
+    		$('#container').css('background-image', 'none');
     	});
+    	$('#planet').hover(function(){
+    		$('#container').css('background-image', 'url("earth.jpg")');
+    	}, function(){
+    		$('#container').css('background-image', 'none');
+    	});
+    	$('#dojo').hover(function(){
+    		$('#container').css('background-image', 'url("dojo.jpg")');
+    	}, function(){
+    		$('#container').css('background-image', 'none');
+    	});
+    	$('#forest').hover(function(){
+    		$('#container').css('background-image', 'url("forest.jpg")');
+    	}, function(){
+    		$('#container').css('background-image', 'none');
+    	});
+    	$('#matrix').hover(function(){
+    		$('#container').css('background-image', 'url("matrix.jpg")');
+    	}, function(){
+    		$('#container').css('background-image', 'none');
+    	});
+    	$('#snow').hover(function(){
+    		$('#container').css('background-image', 'url("snow.jpg")');
+    	}, function(){
+    		$('#container').css('background-image', 'none');
+    	});
+    		$('#beach').click(function(){
+    			$('#container').css('background-image', 'url("beach.jpg")');
+    		});
+
+
+    	
+
+    });
 
     </script>
 
