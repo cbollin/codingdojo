@@ -3,67 +3,134 @@
 <head>
 	<title>Dojo Thing</title>
 	<link rel="stylesheet" type="text/css" href="dojo.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
- 	<script type="text/javascript">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
 
-    $(document).ready(function(){
-    	$('#beach').hover(function(){
-    		$('#container').css('background-image', 'url("beach.jpg")');
-    	}, function(){
-    		$('#container').css('background-image', 'none');
-    	});
-    	$('#planet').hover(function(){
-    		$('#container').css('background-image', 'url("earth.jpg")');
-    	}, function(){
-    		$('#container').css('background-image', 'none');
-    	});
-    	$('#dojo').hover(function(){
-    		$('#container').css('background-image', 'url("dojo.jpg")');
-    	}, function(){
-    		$('#container').css('background-image', 'none');
-    	});
-    	$('#forest').hover(function(){
-    		$('#container').css('background-image', 'url("forest.jpg")');
-    	}, function(){
-    		$('#container').css('background-image', 'none');
-    	});
-    	$('#matrix').hover(function(){
-    		$('#container').css('background-image', 'url("matrix.jpg")');
-    	}, function(){
-    		$('#container').css('background-image', 'none');
-    	});
-    	$('#snow').hover(function(){
-    		$('#container').css('background-image', 'url("snow.jpg")');
-    	}, function(){
-    		$('#container').css('background-image', 'none');
-    	});
-    		$('#beach').click(function(){
-    			$('#container').css('background-image', 'url("beach.jpg")');
-    		});
+        $(document).ready(function(){
+            $("#new_menu").hide();
+            $('#beach').hover(function(){
+              $('#container').css('background-image', 'url("beach.jpg")');
+          });
+            $('#planet').hover(function(){
+              $('#container').css('background-image', 'url("earth.jpg")');
 
+          });
+            $('#dojo').hover(function(){
+              $('#container').css('background-image', 'url("dojo.jpg")');
+              $('#container').css('background-repeat', 'no-repeat');
 
-    	
+          });
+            $('#forest').hover(function(){
+              $('#container').css('background-image', 'url("forest.jpg")');
 
-    });
+          });
+            $('#matrix').hover(function(){
+              $('#container').css('background-image', 'url("matrix.jpg")');
+              $('#container').css('background-repeat', 'no-repeat');
 
+          });
+            $('#snow').hover(function(){
+              $('#container').css('background-image', 'url("snow.jpg")');
+
+          });
+            $('#beach').click(function(){
+               $('#container').css('background-image', 'url("beach.jpg")');
+               $("#button_area").hide();
+               $("#new_menu").show();
+           });
+            $('#planet').click(function(){
+               $('#container').css('background-image', 'url("earth.jpg")');
+               $("#button_area").hide();
+               $("#new_menu").show();
+           });
+            $('#forest').click(function(){
+               $('#container').css('background-image', 'url("forest.jpg")');
+               $("#button_area").hide();
+               $("#new_menu").show();
+           });
+            $('#dojo').click(function(){
+               $('#container').css('background-image', 'url("dojo.jpg")');
+               $('#container').css('background-repeat', 'no-repeat');
+               $("#button_area").hide();
+               $("#new_menu").show();
+           });
+            $('#matrix').click(function(){
+               $('#container').css('background-image', 'url("matrix.jpg")');
+               $('#container').css('background-repeat', 'no-repeat');
+               $("#button_area").hide();
+               $("#new_menu").show();
+           });
+            $('#snow').click(function(){
+               $('#container').css('background-image', 'url("snow.jpg")');
+               $("#button_area").hide();
+               $("#new_menu").show();
+           });
+            function selectplayer(){
+                var img = document.getElementById("image");
+                img.src = $(this).val();
+                return false;
+            }
+            document.getElementById("left").onchange = selectplayer;
+
+            function selectplayer2(){
+                var img = document.getElementById("image1");
+                img.src = $(this).val();
+                return false;
+            }
+            document.getElementById("right").onchange = selectplayer2;
+        });
     </script>
 
 
 </head>
 <body>
 
-<div id="container">
-	<div id="middle_box">
-		<div id="button_area">
-			<h1>Select Arena</h1>
-			<button id="beach">Beach</button>
-			<button id="planet">Planet</button>
-			<button id="dojo">Dojo</button>
-			<button id="forest">Forest</button>
-			<button id="matrix">Matrix</button>
-			<button id="snow">Snow</button>	
-		</div>
-	</div>
+    <div id="container">
+     <div id="middle_box">
+        <div id="button_area">
+            <h1>Select Arena</h1>
+            <button id="beach">Beach</button>
+            <button id="planet">Planet</button>
+            <button id="dojo">Dojo</button>
+            <button id="forest">Forest</button>
+            <button id="matrix">Matrix</button>
+            <button id="snow">Snow</button>	
+        </div>
+        <div id="new_menu">
+            <h1>Select Players</h1>
+            <div class="demo">
+
+                <form action="#">
+
+                    <fieldset>
+                        <label for="speed">Select Ninja</label>
+                        <select name="left" id="left">
+                          <option selected="selected"> Player 1</option>
+                          <option id = "donny" value="donny.png">Donny</option>
+                          <option id = "leo" value="leo.png">Leo</option>
+                          <option id = "mikey" value="mikey.png">Mikey</option>
+                          <option id = "raphael" value="raphael.png">Raphael</option>
+                      </select>
+
+                      <label for="speed">Select Ninja</label>
+                      <select name="right" id="right">
+                         <option selected="selected">Player 2</option>
+                         <option id = "donny1" value="donny.png">Donny</option>
+                         <option id = "leo1" value="leo.png">Leo</option>
+                         <option id = "mikey1" value="mikey.png">Mikey</option>
+                         <option id = "raphael1" value="raphael.png">Raphael</option>
+                     </select> 
+                 </fieldset>
+             </form>
+         </div>
+         
+     </div>
+ </div>
+ <div id="empty">
+             <img id = "image" src="">
+             <img id = "image1" src="">
+
+         </div>
 </div>
 </body>
 </html>

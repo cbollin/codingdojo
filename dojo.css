@@ -7,20 +7,22 @@
 
 #container{
 	width: 960px;
-	height: 600px;
+	height: 650px;
 	padding: 10px;
 	background-color: lightblue;
 	margin: 0px auto;
+	overflow: hidden;
 }
 #middle_box{
 	background-color: grey;
-	width: 250px;
+	width: 211px;
 	height: 200px;
 	margin:  100px auto;
 }
 	#middle_box h1{
 		font-size: 24px;
 		text-align: center;
+		color:orange;
 
 	}
 button{
@@ -29,6 +31,15 @@ button{
 	height: 30px;
 	border-radius: 5px;
 }
+#new_menu h1{
+	color: orange;
+}
 #button_area{
 	width: 213px;
+}
+#image{
+	float:left;
+}
+#image1{
+	float:right;
 }
